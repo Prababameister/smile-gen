@@ -5,6 +5,8 @@ project(smile-gen)
 set(PROJECT_HEAD ${PROJECT_SOURCE_DIR})
 add_definitions( -DPROJECT_HEAD="${PROJECT_HEAD}" )
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(FetchContent)
 
 FetchContent_Declare(
