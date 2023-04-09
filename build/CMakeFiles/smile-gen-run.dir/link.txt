@@ -1,1 +1,0 @@
-/usr/bin/c++ "CMakeFiles/smile-gen-run.dir/main.cc.o" -o smile-gen-run  _deps/glfw-build/src/libglfw3.a lib/foreign/libglad.a /usr/lib/librt.a -lm -ldl /usr/lib/libX11.so /usr/lib/libGLX.so /usr/lib/libOpenGL.so 
