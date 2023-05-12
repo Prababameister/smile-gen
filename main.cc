@@ -30,42 +30,50 @@ GLfloat tex_coords[] = {
 };
 
 GLfloat vertices[] = {
-    // positions          // colors           // texture coords
-    -0.5f,  0.5f,  0.5f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f,   // top left
-     0.5f,  0.5f,  0.5f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
-     0.5f, -0.5f,  0.5f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-    -0.5f, -0.5f,  0.5f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
-    -0.5f,  0.5f, -0.5f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f,   // top left
-     0.5f,  0.5f, -0.5f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
-     0.5f, -0.5f, -0.5f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-    -0.5f, -0.5f, -0.5f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
+    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+     0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+    -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+
+    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+     0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+     0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+     0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+    -0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+
+    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+    -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+    -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+
+     0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+     0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+     0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+     0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+     0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+     0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+
+    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+     0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+     0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+     0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+    -0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+
+    -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+     0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+     0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+     0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+    -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+    -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
 };
-GLuint indices[] = {
-    0, 1, 3, // first triangle
-    1, 2, 3, // second triangle
-    5, 4, 6,
-    4, 7, 6,
-    2, 3, 7,
-    2, 6, 7,
-    0, 1, 4,
-    4, 5, 1,
-    0, 3, 4,
-    7, 3, 4,
-    5, 2, 6,
-    5, 2, 1,
-};
-glm::vec3 cubePositions[] = {
-    glm::vec3( 0.0f,  0.0f,  0.0f),
-    glm::vec3( 2.0f,  5.0f, -15.0f),
-    glm::vec3(-1.5f, -2.2f, -2.5f),
-    glm::vec3(-3.8f, -2.0f, -12.3f),
-    glm::vec3( 2.4f, -0.4f, -3.5f),
-    glm::vec3(-1.7f,  3.0f, -7.5f),
-    glm::vec3( 1.3f, -2.0f, -2.5f),
-    glm::vec3( 1.5f,  2.0f, -2.5f),
-    glm::vec3( 1.5f,  0.2f, -1.5f),
-    glm::vec3(-1.3f,  1.0f, -1.5f)
-};
+
+glm::vec3 light_pos(1.2f, 1.0f, 2.0f);
 
 float delta_time_val = 0;
 
@@ -110,103 +118,60 @@ int main() {
   if(!vertex_shader_.compile())
     vertex_shader_.print_logs();
 
-  shader::Shader<shader::ShaderType::FRAGMENT_SHADER> fragment_shader_{make_abs_path("resources/shaders/shader.frag")};
-  if(!fragment_shader_.compile())
-    fragment_shader_.print_logs();
+  shader::Shader<shader::ShaderType::FRAGMENT_SHADER> obj_fragment_shader_{make_abs_path("resources/shaders/obj.frag")};
+  if(!obj_fragment_shader_.compile())
+    obj_fragment_shader_.print_logs();
 
-  shader::ShaderProgram shader_program_{};
+  shader::Shader<shader::ShaderType::FRAGMENT_SHADER> light_fragment_shader_{make_abs_path("resources/shaders/light.frag")};
+  if(!light_fragment_shader_.compile())
+    light_fragment_shader_.print_logs();
 
-  shader_program_.attach_shader(vertex_shader_);
-  shader_program_.attach_shader(fragment_shader_);
-  shader_program_.link_program();
+  shader::ShaderProgram obj_sp{}, light_sp{};
+
+  obj_sp.attach_shader(vertex_shader_);
+  obj_sp.attach_shader(obj_fragment_shader_);
+  obj_sp.link_program();
+
+  light_sp.attach_shader(vertex_shader_);
+  light_sp.attach_shader(light_fragment_shader_);
+  light_sp.link_program();
 
   vertex_shader_.delete_shader();
-  fragment_shader_.delete_shader();
+  light_fragment_shader_.delete_shader();
+  obj_fragment_shader_.delete_shader();
 
-  GLuint VAO;
-  glGenVertexArrays(1, &VAO);
-
-  glBindVertexArray(VAO);
-
-  GLuint VBO;
+  GLuint VBO, obj_VAO;
+  glGenVertexArrays(1, &obj_VAO);
   glGenBuffers(1, &VBO);
 
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-  GLuint EBO;
-  glGenBuffers(1, &EBO);
+  glBindVertexArray(obj_VAO);
 
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+  // position attribute
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
   glEnableVertexAttribArray(0);
-  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
   glEnableVertexAttribArray(1);
-  glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-  glEnableVertexAttribArray(2);
 
-  glBindVertexArray(GL_ARRAY_BUFFER);
+  // second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
+  GLuint light_VAO;
+  glGenVertexArrays(1, &light_VAO);
+  glBindVertexArray(light_VAO);
+
+  // we only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need (it's already bound, but we do it again for educational purposes)
+  glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+  glEnableVertexAttribArray(0);
 
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
     std::cout << "Failed to intialize GLAD" << std::endl;
     return -1;
   }
 
-  GLuint texture1, texture2;
-
-  glGenTextures(1, &texture1);
-  glBindTexture(GL_TEXTURE_2D, texture1);
-
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-  GLfloat border_color[] = {1.0f, 1.0f, 0.0f, 1.0f};
-  glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, border_color);
-
-  int width, height, nr_channels;
-  stbi_set_flip_vertically_on_load(true);
-  unsigned char *data = stbi_load(make_abs_path("resources/textures/pop_cat_close.png"), &width, &height, &nr_channels, 0);
-  if (data) {
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-    glGenerateMipmap(GL_TEXTURE_2D);
-  }
-  else {
-    std::cout << "Failed to load texture" << std::endl;
-  }
-  stbi_image_free(data);
-
-  glGenTextures(1, &texture2);
-  glBindTexture(GL_TEXTURE_2D, texture2);
-
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-  glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, border_color);
-
-  data = stbi_load(make_abs_path("resources/textures/pop_cat_open.png"), &width, &height, &nr_channels, 0);
-  if (data) {
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-    glGenerateMipmap(GL_TEXTURE_2D);
-  }
-  else {
-    std::cout << "Failed to load texture" << std::endl;
-  }
-  stbi_image_free(data);
-
-  shader_program_.use_program();
-  glUniform1i(glGetUniformLocation(shader_program_.get_shader_program(), "texture1"), 0);
-  glUniform1i(glGetUniformLocation(shader_program_.get_shader_program(), "texture2"), 1);
-
   glEnable(GL_DEPTH);
-
 
   GLfloat last_time_value = glfwGetTime();
   while(!glfwWindowShouldClose(window)) {
@@ -220,40 +185,72 @@ int main() {
 
     GLfloat time_value = glfwGetTime();
     delta_time_val = time_value - last_time_value;
-    GLuint u_time_location = glGetUniformLocation(shader_program_.get_shader_program(), "u_time");
-    glUniform1f(u_time_location, time_value);
 
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture1);
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, texture2);
+    glm::vec3 obj_color = glm::vec3(1.0f, 0.5f, 0.31f);
+    glm::vec3 light_color = glm::vec3(1.0f, 1.0f, 1.0f);
 
-    shader_program_.use_program();
-    glBindVertexArray(VAO);
+    // Start of obj Cube
+    obj_sp.use_program();
 
-    for(unsigned int i = 0; i < 10; ++i) {
-      glm::mat4 model = glm::mat4(1.0f);
-      model = glm::translate(model, cubePositions[i]);
-      float angle = 20.0f * i;
-      model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-      model = glm::rotate(model, glm::radians(time_value * 30.0f), glm::vec3(1.0f, 0.3f, 0.5f));
+    int light_pos_Loc = glGetUniformLocation(obj_sp.get_shader_program(), "lightPos");
+    glUniform3fv(light_pos_Loc, 1, glm::value_ptr(light_pos));
 
-      glm::mat4 view = glm::mat4(1.0f);
-      view = glm::lookAt(camera_pos, camera_pos + camera_front, camera_up);
+    int view_pos_Loc = glGetUniformLocation(obj_sp.get_shader_program(), "viewPos");
+    glUniform3fv(view_pos_Loc, 1, glm::value_ptr(camera_pos));
 
-      glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)screen_width/(float)height, 0.1f, 100.0f);
+    int obj_col_Loc = glGetUniformLocation(obj_sp.get_shader_program(), "objectColor");
+    glUniform3fv(obj_col_Loc, 1, glm::value_ptr(obj_color));
 
-      int modelLoc = glGetUniformLocation(shader_program_.get_shader_program(), "model");
-      glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+    int light_col_Loc = glGetUniformLocation(obj_sp.get_shader_program(), "lightColor");
+    glUniform3fv(light_col_Loc, 1, glm::value_ptr(light_color));
 
-      int viewLoc = glGetUniformLocation(shader_program_.get_shader_program(), "view");
-      glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    glm::mat4 model = glm::mat4(1.0f);
 
-      int projLoc = glGetUniformLocation(shader_program_.get_shader_program(), "proj");
-      glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
+    glm::mat4 view = glm::mat4(1.0f);
+    view = glm::lookAt(camera_pos, camera_pos + camera_front, camera_up);
 
-      glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
-    }
+    glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)screen_width/(float)screen_height, 0.1f, 100.0f);
+
+    int modelLoc = glGetUniformLocation(obj_sp.get_shader_program(), "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+    int viewLoc = glGetUniformLocation(obj_sp.get_shader_program(), "view");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+
+    int projLoc = glGetUniformLocation(obj_sp.get_shader_program(), "proj");
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
+
+    glBindVertexArray(obj_VAO);
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    // End of obj Cube
+
+    // Start of light source Cube
+    light_sp.use_program();
+
+    light_col_Loc = glGetUniformLocation(light_sp.get_shader_program(), "lightColor");
+    glUniform3fv(light_col_Loc, 1, glm::value_ptr(light_color));
+
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, light_pos);
+    model = glm::scale(model, glm::vec3(0.2f));
+
+    view = glm::mat4(1.0f);
+    view = glm::lookAt(camera_pos, camera_pos + camera_front, camera_up);
+
+    proj = glm::perspective(glm::radians(45.0f), (float)screen_width/(float)screen_height, 0.1f, 100.0f);
+
+    modelLoc = glGetUniformLocation(light_sp.get_shader_program(), "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+    viewLoc = glGetUniformLocation(light_sp.get_shader_program(), "view");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+
+    projLoc = glGetUniformLocation(light_sp.get_shader_program(), "proj");
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
+
+    glBindVertexArray(light_VAO);
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    // End of light source Cube
 
     glfwSwapBuffers(window);
     glfwPollEvents();
@@ -261,11 +258,12 @@ int main() {
     last_time_value = time_value;
   }
 
-  glDeleteVertexArrays(1, &VAO);
+  glDeleteVertexArrays(1, &obj_VAO);
+  glDeleteVertexArrays(1, &light_VAO);
   glDeleteBuffers(1, &VBO);
-  glDeleteBuffers(1, &EBO);
 
-  shader_program_.delete_program();
+  obj_sp.delete_program();
+  light_sp.delete_program();
 
   glfwTerminate();
 
